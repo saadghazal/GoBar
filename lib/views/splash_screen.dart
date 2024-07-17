@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:gobar/controllers/onboarding_controller.dart';
 import 'package:gobar/views/on_boarding/main_onboarding.dart';
 
-import '../theme/app_colors.dart';
+import '../utils/theme/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
       Duration(seconds: 2),
       () {
-        Get.to(() => MainOnboarding());
+        Get.toNamed(MainOnboarding.routeName);
       },
     );
   }
